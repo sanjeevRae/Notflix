@@ -13,7 +13,6 @@ body {
     color: #fff;
 }
 
-/* utilities */
 .container {
     max-width: 1280px;
     margin: auto;
@@ -227,6 +226,11 @@ select option {
     color: #fff;
     border: 0;
 }
+
+.no-underline {
+    text-decoration: none;
+}
+
 
 @media screen and (max-width: 600px) {
     .get-btn {
