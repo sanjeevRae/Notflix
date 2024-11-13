@@ -1,4 +1,3 @@
-// Swiper
 var swiper = new Swiper(".popular-content", {
     slidesPerView:1,
     spaceBetween: 10,
@@ -37,19 +36,29 @@ var swiper = new Swiper(".popular-content", {
       },
     },
 }); 
-// Show Video
-let playButton = document.querySelector(".play-movie");
-let video = document.querySelector(".video-container");
-let myvideo = document.querySelector("#myvideo");
-let closebtn = document.querySelector(".close-video");
 
-playButton.onclick = () => {
-  video.classList.add("show-video");
-  // Auto Play When Click on Button
-  myvideo.play();
-};
-closebtn.onclick = () => {
-  video.classList.remove("show-video");
-  // Pause on Close Video
-  myvideo.pause();
-}; 
+const playButton = document.querySelector(".play-movie");
+const videoContainer = document.querySelector(".video-container");
+const myVideo = document.querySelector("#myvideo");
+
+function openVideo() {
+    videoContainer.classList.add("show-video");
+    myVideo.currentTime = 0; 
+    myVideo.play();
+}
+
+function closeVideo() {
+    videoContainer.classList.remove("show-video");
+    myVideo.pause();
+    myVideo.currentTime = 0; 
+}
+
+if (playButton) {
+    playButton.onclick = openVideo;
+}
+
+if (!videoContainer || !myVideo) {
+    console.error("Video elements not found.");
+}
+
+
