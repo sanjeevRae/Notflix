@@ -457,4 +457,27 @@ function closeVideo() {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Parse query parameters from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const driveLink = urlParams.get("drive"); // Get the Google Drive preview link
 
+  // Select the merovideo div
+  const merovideoDiv = document.querySelector(".merovideo");
+
+  if (driveLink) {
+      // Create the iframe element for embedding
+      const iframe = document.createElement("iframe");
+      iframe.src = driveLink; // Use the provided drive link
+      iframe.width = "1060"; // Set the width
+      iframe.height = "600"; // Set the height
+      iframe.allow = "autoplay"; // Allow autoplay
+      iframe.frameBorder = "0"; // Remove the border
+
+      // Clear existing content and add the iframe
+      merovideoDiv.innerHTML = ""; // Clear previous content if any
+      merovideoDiv.appendChild(iframe);
+  } else {
+      console.error("No drive link provided in the URL.");
+  }
+});
