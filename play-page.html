@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="img/slogo.ico" type="image/x-icon">
     <link href ='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+
 </head>
 <body>
     <header>
@@ -42,21 +45,24 @@
                 <span>Romance</span>
                 <span>Comedy</span>
             </div>
-            <a href="#" class="watch-btn">
+            <a href="trailer/t1.mp4" class="watch-btn">
                 <i class='bx bx-right-arrow'></i>
                 <span>Watch the trailer</span>
             </a>
         </div>
-        <i class='bx bx-right-arrow play-movie'></i>
+        <!-- <i class='bx bx-right-arrow play-movie'></i> -->
       
-
 
         <div id="video-container" class="video-container">
             <div class="video-box">
                 <video id="myvideo" src="trailer/t1.mp4" controls></video>
-                <i class="bx bx-x close-video" onclick="closeVideo()"></i>
+                <button class="close-video" onclick="closeVideo()">X</button>
             </div>
         </div>
+
+        
+        
+        
         
 
 
@@ -135,5 +141,6 @@
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/play-page.js"></script>
 </body>
 </html> 

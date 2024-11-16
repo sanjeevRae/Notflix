@@ -37,28 +37,3 @@ var swiper = new Swiper(".popular-content", {
     },
 }); 
 
-const playButton = document.querySelector(".play-movie");
-const videoContainer = document.querySelector(".video-container");
-const myVideo = document.querySelector("#myvideo");
-
-function openVideo() {
-    videoContainer.classList.add("show-video");
-    myVideo.currentTime = 0; 
-    myVideo.play();
-}
-
-function closeVideo() {
-    videoContainer.classList.remove("show-video");
-    myVideo.pause();
-    myVideo.currentTime = 0; 
-}
-
-if (playButton) {
-    playButton.onclick = openVideo;
-}
-
-if (!videoContainer || !myVideo) {
-    console.error("Video elements not found.");
-}
-
-

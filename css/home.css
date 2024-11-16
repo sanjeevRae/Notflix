@@ -420,9 +420,9 @@ header {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7); 
+    background: rgba(0, 0, 0, 0.7);
     z-index: 400;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .video-container.show-video {
@@ -431,8 +431,8 @@ header {
 
 .video-box {
     position: relative;
-    width: 80%; 
-    max-width: 900px; 
+    width: 80%;
+    max-width: 900px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -440,7 +440,7 @@ header {
 
 #myvideo {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     border-radius: 8px;
 }
 
@@ -450,10 +450,11 @@ header {
     right: 10px;
     font-size: 28px;
     color: white;
-    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
     padding: 8px;
     border-radius: 50%;
+    cursor: pointer;
+    z-index: 500;
     transition: color 0.3s ease, background 0.3s ease;
 }
 
@@ -461,6 +462,9 @@ header {
     color: #ff5c5c;
     background: rgba(0, 0, 0, 0.8);
 }
+
+
+
 
 
 .about-movie {
