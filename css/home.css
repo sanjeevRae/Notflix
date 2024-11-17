@@ -266,6 +266,24 @@ header {
 .movie-type {
     font-size: 0.938rem;
 }
+
+
+.movie-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-item img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+
+
 .play-btn {
     position: absolute;
     bottom: 0.8rem;
@@ -754,7 +772,6 @@ header {
     margin-bottom: 15px;
 }
 
-
 .merovideo iframe {
     width: 100%;
     max-width: 1060px;
@@ -762,6 +779,7 @@ header {
     aspect-ratio: 16 / 9;
     margin: 5rem auto;
     display: block;
+    transition: transform 0.3s ease; /* Smooth transition for zooming */
 }
 
 @media (max-width: 1060px) {
@@ -791,3 +809,104 @@ header {
         margin: 2rem auto;
     }
 }
+
+
+
+
+.search-container {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.search-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: var(--container-color);
+    border-radius: 4rem;
+}
+
+
+.search-box .bx {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.search-box .bx:hover {
+    color: var(--main-color);
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+
+
+
+#movie-list {
+
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #0c0707;
+    max-height: 90vh;
+    overflow-y: auto; 
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute; 
+    top: 10%; 
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: none;
+  }
+  
+  .movie-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #1f0d0d;
+    border-radius: 8px;
+    background-color: #270e0e;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 100%; 
+  }
+  
+  .movie-item:hover {
+    background-color: #141313;
+  }
+  
+  .movie-cover {
+    width: 150px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .movie-title {
+    font-size: 1.5rem; 
+    color: #333;
+    font-weight: 600;
+    width: 80%; 
+    text-align: left;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
