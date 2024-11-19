@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="img/slogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Notflix</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +29,12 @@
                     </select>
                 </div>
 
-                <a href="#" class="signin-btn">Sign In</a>
+                <button class="signin-btn" id="googleSignInBtn">Sign In with Google</button>
+              
+              
+
+                
+
             </nav>
 
            
@@ -39,20 +45,19 @@
                 <div class="form-field">
                     <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
 
-                    <form class="form">
+                    <form id="emailForm" class="form">
                         <div class="form-group">
-                            <input type="email" class="form-input" placeholder=" " id="email">
+                            <input type="email" class="form-input" placeholder=" " id="email" required>
                             <label for="email" class="form-label">Email Address</label>
                         </div>
-
-                        <button class="get-btn">
+                        <button type="submit" class="get-btn">
                             <span>Get Started</span>
                             <svg width="24" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.29 19.29L14.59 12 7.29 4.71 8.71 3.29l8.99 8.99c.19.19.29.44.29.71s-.1.52-.29.71l-8.99 8.99-1.42-1.42z"/>
-                              </svg>
-                              
+                            </svg>
                         </button>
                     </form>
+                    
                 </div>
             </div>
         </div>
@@ -271,5 +276,120 @@
             </div>
         </div>
     </footer>
+
+   
+
+    <script type="module">
+        // Firebase Configuration and Authentication setup
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+    
+        const firebaseConfig = {
+          apiKey: "AIzaSyB70-Z9CFQi7xtmSKMQjo3tEoCMPUnoCIo",
+          authDomain: "the-notflix.firebaseapp.com",
+          projectId: "the-notflix",
+          storageBucket: "the-notflix.firebasestorage.app",
+          messagingSenderId: "334981648790",
+          appId: "1:334981648790:web:c91ff8cbd551b88c3ecdb7",
+          measurementId: "G-Y5V00VSFX0"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const provider = new GoogleAuthProvider();
+        const db = getFirestore(app);
+    
+        // Google Sign-In Function
+        function signInWithGoogle() {
+          signInWithPopup(auth, provider)
+            .then(async (result) => {
+              const user = result.user;
+              const userName = user.displayName;
+              const userEmail = user.email;
+              const userPhoto = user.photoURL;
+    
+              // Send user data to backend PHP for database insertion
+              const formData = new FormData();
+              formData.append("name", userName);
+              formData.append("email", userEmail);
+              formData.append("photoURL", userPhoto);
+    
+              // Call backend PHP to insert data into the database
+              fetch("insertUser.php", {
+                method: "POST",
+                body: formData,
+              })
+              .then(response => response.json())
+              .then(data => {
+                if (data.success) {
+                  console.log("User info stored in database successfully");
+                } else {
+                  console.log("Failed to store user info");
+                }
+              })
+              .catch(error => console.error("Error inserting user info:", error));
+    
+              // Store user info in sessionStorage
+              sessionStorage.setItem('userName', userName);
+              sessionStorage.setItem('userEmail', userEmail);
+              sessionStorage.setItem('userPhoto', userPhoto);
+    
+              // Redirect to home page
+              window.location.href = 'back.html';  
+            })
+            .catch((error) => {
+              console.error("Error during sign-in:", error);
+            });
+        }
+    
+        document.getElementById("googleSignInBtn").addEventListener("click", signInWithGoogle);
+      </script>
+
+
+
+
+<script type="text/javascript">
+    // Initialize EmailJS with your public key
+    emailjs.init("C-c_ieBFgoEKweILO");  // Replace with your actual public key
+
+    // Handle form submission
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var userEmail = document.getElementById('email').value;  // Get the email entered by the user
+
+        if (userEmail) {
+            // Define template parameters
+            var templateParams = {
+                email: userEmail,  // Pass the email entered
+            };
+
+            // Send email using EmailJS
+            emailjs.send("service_dagkzee", "template_alx52fv", templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully!', response);
+                    alert('Thank you! We have received your email.');
+                })
+                .catch(function(error) {
+                    console.error('Failed to send email:', error);
+                    alert('There was an error sending the email. Please try again.');
+                });
+        } else {
+            alert('Please enter a valid email address.');
+        }
+    });
+</script>
+
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+
 </body>
 </html>

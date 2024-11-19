@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page - Notflix</title>
+  <link rel="stylesheet" href="users.css">
+</head>
+<body>
+
+
+<div class="user-page">
+    <div class="user-box">
+        <div class="user-photo">
+            <img id="userPhotoDisplay" alt="User Photo">
+        </div>
+
+        <div class="user-info">
+            <h2 id="userNameDisplay">John Doe</h2>
+            <p id="userEmailDisplay"></p>
+            <a href="back.html">
+                <button class="logout-btn">Go Back</button>
+            </a>
+        </div>
+        <div class="user-info">
+            <a href="home.html">
+                <button class="logout-btn">Logout</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+  <script type="module">
+   
+    const userName = sessionStorage.getItem('userName');
+    const userEmail = sessionStorage.getItem('userEmail');
+    const userPhoto = sessionStorage.getItem('userPhoto');
+
+    document.getElementById("userNameDisplay").textContent = userName;
+    document.getElementById("userEmailDisplay").textContent = userEmail;
+    document.getElementById("userPhotoDisplay").src = userPhoto;
+  </script>
+
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+  
+</body>
+</html>

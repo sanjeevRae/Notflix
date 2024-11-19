@@ -8,6 +8,10 @@
     box-sizing: border-box;
     scroll-padding-top: 2rem;
 }
+.description{
+    padding-top: 1rem;
+    color: var(--text-color);
+}
 
 :root {
     --main-color: #ff3a3a;
@@ -184,6 +188,8 @@ header {
 .home-text {
     padding-left: 40px;
 }
+
+
 .home-title {
     font-size: 2rem;
     font-weight: 600;

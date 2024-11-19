@@ -27,9 +27,15 @@
             </div>
 
 
-            <a href="#" class="user">
+            <!-- <a href="#" class="user">
                 <img src="img/user.jpg" alt="" class="user-img">
+            </a> -->
+
+            
+            <a href="user-acc.html" class="user">
+                <img id="userPhotoDisplay" alt="User photo" class="user-img">
             </a>
+
 
             <div class="navbar">
                 <a href="#home" class="nav-link nav-active">
@@ -338,6 +344,61 @@
         </div>
     </footer>
 
+
+
+    <script type="module">
+        // Fetch user data from sessionStorage
+        // const userName = sessionStorage.getItem('userName');
+        // const userEmail = sessionStorage.getItem('userEmail');
+        const userPhoto = sessionStorage.getItem('userPhoto');
+    
+        // document.getElementById("userNameDisplay").textContent = userName;
+        // document.getElementById("userEmailDisplay").textContent = userEmail;
+        document.getElementById("userPhotoDisplay").src = userPhoto;
+      </script>
+    
+
+      <script>
+    // Initialize EmailJS with your Public Key
+    emailjs.init("PkT1RkizsxusCBkhu"); // Replace with your actual Public Key
+
+    // Function to send email when the "Get Started" button is clicked
+    function sendEmail() {
+      // Template parameters to pass to the template in EmailJS
+      const templateParams = {
+        to_name: "John Doe",  // Replace with recipient's name
+        from_name: "Your App", // Replace with your sender name
+        message: "Welcome to our platform! We're excited to have you on board.", // The message content
+        email: "johndoe@example.com", // Replace with recipient's email
+      };
+
+      // Send email using EmailJS
+      emailjs.send(
+        "service_ivtz4xt", // Your Service ID
+        "template_oivaqpp", // Your Template ID
+        templateParams, // Parameters for your template
+        "PkT1RkizsxusCBkhu" // Your Public Key
+      )
+      .then(
+        function(response) {
+          console.log("Email sent successfully", response.status, response.text);
+        },
+        function(error) {
+          console.log("Failed to send email", error);
+        }
+      );
+    }
+
+    // Add event listener to "Get Started" button
+    document.getElementById("get-started-btn").addEventListener("click", function() {
+      sendEmail(); // Call sendEmail function when the button is clicked
+    });
+  </script>
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
     <script src="js/search.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
