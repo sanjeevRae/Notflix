@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway with Khalti</title>
+    <script src="https://khalti.s3.ap-south-1.amazonaws.com/KPG/dist/2020.12.17.0.0.0/khalti-checkout.iffe.js"></script>
+    <style>
+        .amount-display {
+            display: none; /* Hide the amount display */
+        }
+    </style>
+</head>
+<body>
+   
+
+    <script>
+        var config = {
+            
+            "publicKey": "test_public_key_fd42ed985a6f4ab6bcf336307027a52b",
+            "productIdentity": "1234567890",
+            "productName": "Notflix",
+            "productUrl": "https://sanjeevrae.github.io/Notflix/",
+            "paymentPreference": [
+                "KHALTI",
+                "EBANKING",
+                "MOBILE_BANKING",
+                "CONNECT_IPS",
+                "SCT",
+            ],
+            "eventHandler": {
+                onSuccess (payload) {
+                   
+                    window.location.href = "../user-acc.html";
+                },
+                onError (error) {
+                    console.log(error);
+                },
+                onClose () {
+                    console.log('widget is closing');
+                }
+            }
+        };
+
+        var checkout = new KhaltiCheckout(config);
+
+      
+        window.onload = function() {
+          
+            checkout.show({amount: 14900}); 
+        }
+    </script>
+    
+</body>
+</html>

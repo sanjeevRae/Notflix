@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="shortcut icon" href="img/new.ico" type="image/x-icon">
+    <link href ='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+
+        <div class="nav container">
+            <a href="index-1.html" class="logo">
+                <img src="img/notflix t.png" width="200" alt="Notflix Logo">
+            </a>
+            
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="search" name="" id="search-input" placeholder="Search movie">
+                    <i class='bx bx-search'></i>
+                </div>
+                <div id="movie-list"></div>
+            </div>
+
+
+            
+
+            
+            <a href="./user/user-acc.html" class="user">
+                <img id="userPhotoDisplay" alt="User photo" class="user-img">
+            </a>
+
+
+            <div class="navbar">
+                <a href="./index-1.html" class="nav-link nav-active">
+                    <i class="bx bx-home"></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+
+                <a href="#popular" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Popular</span>
+                </a>
+
+                <a href="#movies" class="nav-link">
+                    <i class='bx bx-movie'></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+                
+        </div>
+    </header>
+    <section class="home container" id="home">
+        <img src="img/cover2.png" alt="" class="home-img">
+        <div class="home-text">
+            <h1 class="home-title">A Dirty Carnival </h1>
+            <p id="wow">Action/Thriller ‧ 2h 21m </p>
+            
+            <a href="play-page.html?title=A%20Dirty%20Carnival&type=Action/Thriller&image=img/cover2.png&trailer=trailer/t4.mp4&drive=https://drive.google.com/file/d/17KUm9Yf6-oUOceRyevhbOgdnwSRjr6ge/preview" class="watch-btn">
+                
+                <span >View More</span>
+            </a>
+
+            
+        </div>
+
+    </div>
+    </section>
+    <section class="popular container" id="popular">
+        <div class="heading">
+            <h2 class="heading-title">Popular</h2>
+            <div class="swiper-btn">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="popular-content swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/all about lilly chou chou.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">All About Lilly Chou-Chou</h2>
+                            <span class="movie-type">Crime/Thriller</span>
+                            <a href="play-page.html?title=All%20About%20Lilly%20Chou-Chou&type=Crime/Thriller&image=img/all%20about%20lilly%20chou%20chou.png&trailer=trailer/t8.mp4&drive=https://drive.google.com/file/d/10i51Ztrv-7tcmnWxdFRQ1ycwecWhwevZ/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/love letter 1995.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Love letter 1995</h2>
+                            <span class="movie-type">Romance/Drama</span>
+                            <a href="play-page.html?title=Love%20letter%201995&type=Romance/Drama&image=img/love%20letter%201995.png&trailer=trailer/t13.mp4&drive=https://drive.google.com/file/d/1-NtXAIp_TvE4-u_C7CZCntJ2kRzhy-51/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/chunking express.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Chungking Express</h2>
+                            <span class="movie-type">Romance/Comedy</span>
+                            <a href="play-page.html?title=Chungking%20Express&type=Romance/Comedy&image=img/chunking%20express.png&trailer=trailer/t1.mp4&drive=https://drive.google.com/file/d/1GrGwOog0B69DQ9sBG0rWpjuDe0JiZUA6/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/butterfly effect.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Butterfly Effect</h2>
+                            <span class="movie-type">Thriller/Sci-fi</span>
+                            <a href="play-page.html?title=Butterfly%20Effect&type=Thriller/Sci-Fi&image=img/Butterfly%20Effect.png&trailer=trailer/t10.mp4&drive=https://drive.google.com/file/d/1eHV9df97vn0sk0_cW4aonK2wZVBFgTDo/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                             </a>
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/taste of tea.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">The Taste of Tea</h2>
+                            <span class="movie-type">Fantasy/Comedy</span>
+                            <a href="play-page.html?title=Taste%20of%20Tea&type=Drama/Comedy&image=img/taste%20of%20tea.png&trailer=trailer/t2.mp4&drive=https://drive.google.com/file/d/1W_rWdmzbeKKuyO77Kt-pV4zIoBtj875p/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                             </a>
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/nobody knows.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Nobody Knows</h2>
+                            <span class="movie-type">Drama/Family</span>
+                            <a href="play-page.html?title=Nobody%20Knows&type=Drama/Family&image=img/nobody%20knows.png&trailer=trailer/t15.mp4&drive=https://drive.google.com/file/d/1bk1ocU01411bEOgAUiaBwGJRwGkM1X-B/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/april story.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">April Story</h2>
+                            <span class="movie-type"> Romance/Drama </span>
+                            <a href="play-page.html?title=April%20Story&type=Romance/Drama&image=img/april%20story.png&trailer=trailer/t9.mp4&drive=https://drive.google.com/file/d/1CnaU1RjnbsdpqRgDV9UwCkPAXSiQzTHZ/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="movie-box">
+                        <img src="img/parasite.png" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">Parasite</h2>
+                            <span class="movie-type">Thriller/Comedy</span>
+                            <a href="play-page.html?title=Parasite&type=Thriller/Comedy&image=img/parasite.png&trailer=trailer/t21.mp4&drive=https://drive.google.com/file/d/1Xj0vEUM1vGkWMaprKTgmGN5_GfwJ02so/preview" class="watch-btn play-btn">
+                                <i class="bx bx-right-arrow"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+        </div>
+    </section>
+    
+
+    <section class="movies container" id="movies">
+    <div class="heading">
+        <h2 class="heading-title">Movies and Shows</h2>
+    </div>
+    <div class="movies-content" id="movies-content">
+    </div>
+</section>
+
+<script>
+   
+    fetch('movies.php')
+        .then(response => response.json())
+        .then(movies => {
+            const moviesContent = document.getElementById('movies-content');
+
+          
+            if (movies.length > 0) {
+                
+                movies.forEach(movie => {
+                    const movieBox = document.createElement('div');
+                    movieBox.classList.add('movie-box');
+
+                    movieBox.innerHTML = `
+                        <img src="${movie.movie_pic}" alt="" class="movie-box-img">
+                        <div class="box-text">
+                            <h2 class="movie-title">${movie.movie_name}</h2>
+                            
+                            
+                            <a href="${movie.direct}" class="watch-btn direct-btn">
+                                <i class="bx bx-right-arrow"></i> ${movie.type}
+                            </a>
+                        </div>
+                    `;
+                    
+                   
+                    moviesContent.appendChild(movieBox);
+                });
+            } else {
+                moviesContent.innerHTML = '<p>No movies available</p>';
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+
+    <footer class="footer">
+        <div class="container">
+
+            <a href="./extra/contact.html">Questions? Contact us.</a>
+            
+            <ul class="grid-container">
+            
+                <li><a href="./extra/faq.html">FAQ</a></li>
+                <li><a href="./extra/credit.html" target="_blank">Credit</a></li>
+                <li><a href="./user/user-acc.html">Account</a></li>
+                <li><a href="./extra/privacy.html">Privacy</a></li>
+                <li><a href="https://fast.com/">Speed Test</a></li>
+                <li><a href="./extra/term.html">Terms of Use</a></li>
+                <li><a href="./extra/legal.html">Legal Notices</a></li>
+               
+               
+                
+            </ul>
+
+            <div class="select-box">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" ><path fill-rule="evenodd" clip-rule="evenodd" d="M8,14.5c0.23033,0 0.84266,-0.2257 1.48679,-1.514c0.27614,-0.5523 0.51294,-1.2239 0.68801,-1.986h-4.3496c0.17507,0.7621 0.41187,1.4337 0.68801,1.986c0.64413,1.2883 1.25646,1.514 1.48679,1.514zM10.4224,9.5c0.0504,-0.47923 0.0776,-0.98089 0.0776,-1.5c0,-0.51911 -0.0272,-1.02077 -0.0776,-1.5h-4.84478c-0.05046,0.47923 -0.07762,0.98089 -0.07762,1.5c0,0.51911 0.02716,1.02077 0.07762,1.5zM11.7092,11c-0.227,1.1217 -0.5775,2.117 -1.0178,2.9184c1.3223,-0.6023 2.4073,-1.6347 3.0764,-2.9184zM14.5,8c0,-0.51627 -0.0602,-1.01848 -0.1739,-1.5h-2.3963c0.0461,0.48588 0.0702,0.98731 0.0702,1.5c0,0.51269 -0.0241,1.01412 -0.0702,1.5h2.3963c0.1137,-0.48152 0.1739,-0.98373 0.1739,-1.5zM4,8c0,-0.51269 0.02411,-1.01412 0.0702,-1.5h-2.39627c-0.11374,0.48152 -0.17393,0.98373 -0.17393,1.5c0,0.51627 0.06019,1.01848 0.17393,1.5h2.39627c-0.04609,-0.48588 -0.0702,-0.98731 -0.0702,-1.5zM5.30864,13.9184c-0.44032,-0.8014 -0.79085,-1.7967 -1.01788,-2.9184h-2.05855c0.66907,1.2837 1.75414,2.3161 3.07643,2.9184zM5.8252,5h4.3496c-0.17507,-0.76207 -0.41187,-1.43374 -0.68801,-1.98603c-0.64413,-1.28826 -1.25646,-1.51397 -1.48679,-1.51397c-0.23033,0 -0.84266,0.22571 -1.48679,1.51397c-0.27614,0.55229 -0.51294,1.22396 -0.68801,1.98603zM11.7092,5h2.0586c-0.6691,-1.28373 -1.7541,-2.31611 -3.0764,-2.91838c0.4403,0.8014 0.7908,1.79668 1.0178,2.91838zM2.23221,5h2.05855c0.22703,-1.1217 0.57756,-2.11698 1.01788,-2.91838c-1.32229,0.60227 -2.40736,1.63466 -3.07643,2.91838zM8,0c4.4183,0 8,3.58172 8,8c0,4.4183 -3.5817,8 -8,8c-4.41828,0 -8,-3.5817 -8,-8c0,-4.41828 3.58172,-8 8,-8z" fill="currentColor"></path></svg>
+
+                <select>
+                    <option value="">English</option>
+                  
+                </select>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script type="module">
+        const userPhoto = sessionStorage.getItem('userPhoto');
+    
+        document.getElementById("userPhotoDisplay").src = userPhoto;
+      </script>
+    
+
+      <script>
+   
+    emailjs.init("PkT1RkizsxusCBkhu"); 
+
+    function sendEmail() {
+      const templateParams = {
+        to_name: "John Doe",  
+        from_name: "Your App", 
+        message: "Welcome to our platform! We're excited to have you on board.", 
+        email: "johndoe@example.com", 
+      };
+      emailjs.send(
+        "service_ivtz4xt", 
+        "template_oivaqpp",
+        templateParams, 
+        "PkT1RkizsxusCBkhu" 
+      )
+      .then(
+        function(response) {
+          console.log("Email sent successfully", response.status, response.text);
+        },
+        function(error) {
+          console.log("Failed to send email", error);
+        }
+      );
+    }
+
+    document.getElementById("get-started-btn").addEventListener("click", function() {
+      sendEmail();
+    });
+  </script>
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

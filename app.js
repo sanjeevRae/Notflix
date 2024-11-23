@@ -1,19 +1,19 @@
-// Initialize EmailJS with your public key
-emailjs.init("C-c_ieBFgoEKweILO"); // Replace with your actual public key
 
-// Handle form submission
+emailjs.init("C-c_ieBFgoEKweILO"); 
+
+
 document.getElementById('emailForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
-    var userEmail = document.getElementById('email').value; // Get the email entered by the user
+    var userEmail = document.getElementById('email').value; 
 
     if (userEmail) {
-        // Define template parameters
+   
         var templateParams = {
-            email: userEmail,  // Pass the email entered
+            email: userEmail, 
         };
 
-        // Send email using EmailJS
+       
         emailjs.send("service_dagkzee", "template_alx52fv", templateParams)
             .then(function(response) {
                 console.log('Email sent successfully!', response);

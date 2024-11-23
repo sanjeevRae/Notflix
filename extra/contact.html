@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/new.ico" type="image/x-icon">
+    <title>Contact Notflix</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("../img/Lbackground.png") no-repeat center center fixed;
+            background-size: cover; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: rgb(255, 255, 255);  
+            overflow: hidden;
+           
+        }
+        .contact-form-container {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap; 
+            background-color: rgba(9, 9, 9, 0.8); 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 20px;
+        }
+
+        .form-left {
+            flex: 1;
+            margin-right: 20px;
+            text-align: left;
+            min-width: 250px; 
+        }
+
+        .form-left .icon {
+            width: 40px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .form-left h1 {
+            padding: 2px;
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        .form-left p {
+            padding: 3px;
+            text-align: justify;
+            font-size: 1rem;
+            color: #fff5f5;
+        }
+
+        .form-right {
+            flex: 1;
+            margin-top: 2rem;
+            margin-left: 10px;
+            padding: 5px;
+            min-width: 250px;  
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            flex-wrap:nowrap;  
+        }
+
+        .input-field {
+            flex: 1;
+            padding: 15px;
+            margin: 5px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #ffffff;
+        }
+
+        
+        textarea.input-field {
+            width: 100%; 
+            padding: 15px;
+            margin: 5px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: #ffffff;
+            height: 120px;
+            resize: vertical;
+        }
+
+        .btn {
+            margin-left: 1rem;
+            background-color: #ff1313;
+            color: #ffffff;
+            border: none;
+            padding: 15px 0px 15px 30px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%; 
+            box-sizing: border-box;
+        }
+
+        .btn:hover {
+            background-color: #cc0000;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .go-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            background: transparent;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .go-back:hover {
+            color: red;
+            background: rgba(0, 0, 0, 0.7);
+        }
+       
+        @media (max-width: 767px) {
+            .contact-form-container {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .form-left, .form-right {
+                width: 100%; 
+                margin-left: 0;
+                margin-right: 0;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .input-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .input-field, textarea.input-field {
+                width: 100%;  
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            textarea.input-field {
+                height: 120px;
+            }
+        }
+
+        
+        @media (max-width: 1024px) {
+            .contact-form-container {
+                padding: 30px;
+            }
+
+            .form-left, .form-right {
+                width: 48%; 
+                margin-right: 2%;
+            }
+
+            .form-left h1 {
+                font-size: 1.5rem;
+            }
+
+            .form-left p {
+                font-size: 0.9rem;
+            }
+
+            .input-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            textarea.input-field {
+                height: 150px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .contact-form-container {
+                padding: 40px;
+            }
+
+            .form-left, .form-right {
+                width: 48%;  
+                margin-right: 2%;
+            }
+
+            .form-left h1 {
+                font-size: 2rem;
+            }
+
+            .form-left p {
+                font-size: 1rem;
+            }
+
+            .input-group {
+                flex-direction: row;  
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            textarea.input-field {
+                height: 180px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <a href="javascript:history.back()" class="go-back">←</a>
+    </div>
+    
+  <div>
+
+    
+    <div class="contact-form-container">
+        
+        <div class="form-left">
+                <a href="../movie.html">
+                    <img src="../img/notflix t.png" width="200px" alt="Contact">
+                </a>
+            <h1>Have a question or need assistance?</h1>
+            <p>Fill out the contact form below, and
+                 We’ll respond as quickly as possible to assist with any issues or inquiries you may have.</p>
+        </div>
+
+        <div class="form-right">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" data-reveal="right">
+                <input type="hidden" name="access_key" value="a2a5e2d7-a258-4bb5-b140-00e65aca0590">
+                
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Name *" required class="input-field">
+                    <input type="email" name="email_address" placeholder="Email *" required class="input-field">
+                </div>
+
+                <textarea name="message" placeholder="Message *" required class="input-field"></textarea>
+
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <button type="submit" class="btn">Send message</button>
+            </form>
+        </div>    
+    </div>  
+    <p> &copy;2024 Notflix. All rights reserved.</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?php
+include('dbconfig.php');
+
+// Fetch user join data
+$sql = "SELECT created_at FROM users";
+$result = $conn->query($sql);
+
+$joinData = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $monthYear = date('Y-m', strtotime($row['created_at']));
+        if (isset($joinData[$monthYear])) {
+            $joinData[$monthYear]++;
+        } else {
+            $joinData[$monthYear] = 1;
+        }
+    }
+}
+
+$conn->close();
+
+// Prepare data for the chart
+$labels = json_encode(array_keys($joinData));
+$data = json_encode(array_values($joinData));
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Join Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+        canvas {
+            margin-top: 20px;
+            max-width: 600px;
+            width: 100%;
+        }
+        button {
+            background-color: #e50914;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b20710;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleChartType">Switch to Line Chart</button>
+    <canvas id="userChart"></canvas>
+    
+    <script>
+        const ctx = document.getElementById('userChart').getContext('2d');
+        let chartType = 'bar';
+
+        const userChart = new Chart(ctx, {
+            type: chartType,
+            data: {
+                labels: <?php echo $labels; ?>,
+                datasets: [{
+                    label: 'Users Joined',
+                    data: <?php echo $data; ?>,
+                    backgroundColor: '#e50914',
+                    borderColor: '#b20710',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        document.getElementById('toggleChartType').addEventListener('click', () => {
+            chartType = chartType === 'bar' ? 'line' : 'bar';
+            userChart.config.type = chartType;
+            userChart.update();
+        });
+    </script>
+</body>
+</html>

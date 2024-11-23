@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="shortcut icon" href="../img/new.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+        <a href="">
+            <img src="../img/notflix t.png" width="200px">
+        </a>
+        
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="../admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="../manage.php"><i class="fas fa-film"></i> Manage Movies</a></li>
+            <li><a href="../manage-user.php"><i class="fas fa-users"></i> Manage Users</a></li>
+            <li><a href="../show-me.php"><i class="fas fa-chart-line"></i> Analytics</a></li>
+        </ul>
+        <a href="../admin.php" class="logout-btn">Logout</a>
+    </aside>
+
+    <main class="admin-content">
+        <header class="admin-header">
+            <h1>Dashboard</h1>
+        </header>
+
+        <section class="dashboard">
+         
+            <div class="dashboard-card">
+                <i class="fas fa-film"></i>
+                <h3>Manage Movies</h3>
+                <p>Add, Edit, or Delete movies in your library.</p>
+                <a href="../manage.php" class="card-btn">Go to Movies</a>
+            </div>
+
+          
+            <div class="dashboard-card">
+                <i class="fas fa-users"></i>
+                <h3>Manage Users</h3>
+                <p>View and manage registered users.</p>
+                <a href="../manage-user.php" class="card-btn">Go to Users</a>
+            </div>
+
+            <div class="dashboard-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Analytics</h3>
+                <p>Check usage and growth statistics.</p>
+                <a href="../show-me.php" class="card-btn">View Reports</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

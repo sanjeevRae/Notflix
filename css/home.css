@@ -907,8 +907,8 @@ header {
   
   .movie-title {
     font-size: 1.5rem; 
-    color: #333;
-    font-weight: 600;
+    color: var(--text-color);
+    font-weight: 500;
     width: 80%; 
     text-align: left;
   white-space: nowrap; 

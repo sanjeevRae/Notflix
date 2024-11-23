@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  color: #ff0000;
+  margin: 20px 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #cc0000;
+}
+
+.btn.remove {
+  background-color: #333333;
+}
+
+.btn.remove:hover {
+  background-color: #444444;
+}
+
+/* Add Movie Form */
+#add-movie-form {
+  display: none;
+  margin-top: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+.cast-row {
+  display: flex;
+  gap: 10px;
+}
+
+.cast-row input {
+  width: 22%;
+}
+
+/* Movie List */
+#movie-list {
+  display: none;
+  margin-top: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.6);
+}
+
+.movie-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+}
+
+.movie-item:last-child {
+  border-bottom: none;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+}
+
+.movie-info img {
+  width: 50px;
+  height: 75px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.delete-btn {
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}

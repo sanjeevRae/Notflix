@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/new.ico" type="image/x-icon">
+    <title>Notflix Creators</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        
+        .testimonial-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .testimonial-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #e50914;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-box {
+            background-color: #333;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e50914;
+        }
+
+        .testimonial-box p {
+            font-size: 1rem;
+            color: #bbb;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .testimonials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-section h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-box h3 {
+                font-size: 1.2rem;
+            }
+
+            .testimonial-box p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="testimonial-section">
+        <h2>Credit</h2>
+
+        <div class="testimonials">
+            <div class="testimonial-box">
+                <img src="../img/download.jpg" alt="Bhuwan">
+                <h3>Bhuwan Bhatta</h3>
+                <p>"I developed the server-side architecture using Firebase, ensuring smooth user registration and content management."</p>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="../img/409191939_1106498037193564_8987714255479667615_n.jpg" alt="Manish">
+                <h3>Manish Mandar</h3>
+                <p>"I designed and optimized the user interface, ensuring a responsive and visually appealing experience across all devices.”</p>
+            </div>
+
+            <div class="testimonial-box">
+                <img src="../img/500 days of summer.png" alt="Sanjeev">
+                <h3>Sanjeev Rai</h3>
+                <p>“I worked on the front-end development enhancing video streaming features and ensuring a fast, dynamic experience.”</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
