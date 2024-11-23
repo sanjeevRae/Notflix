@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jKhNHb8nGwe6uq8XrtcOk01k-SKFuEyvhjCRI40TXpQ" />
     <link rel="shortcut icon" href="img/new.ico" type="image/x-icon">
     <title>Admin Login</title>
     <style>
