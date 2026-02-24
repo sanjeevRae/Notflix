@@ -7,13 +7,13 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB70-Z9CFQi7xtmSKMQjo3tEoCMPUnoCIo",
+  apiKey: "",
   authDomain: "the-notflix.firebaseapp.com",
   projectId: "the-notflix",
-  storageBucket: "the-notflix.firebasestorage.app",
-  messagingSenderId: "334981648790",
-  appId: "1:334981648790:web:c91ff8cbd551b88c3ecdb7",
-  measurementId: "G-Y5V00VSFX0"
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
